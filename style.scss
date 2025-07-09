@@ -25,6 +25,7 @@ body {
     justify-content: center;
     text-align: center;
     gap: 20px;
+    padding: 20px;
 }
 
 .envelope-container {
@@ -76,11 +77,11 @@ body {
         position: absolute;
         top: 15px;
         left: 15px;
-        width: 670px;
-        height: 470px;
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
         background-color: $background-color;
         border: 2px dashed $primary-color;
-        padding: 30px;
+        padding: 20px;
         box-sizing: border-box;
         border-radius: 12px;
         display: none;
@@ -90,15 +91,23 @@ body {
         h3 {
             color: $primary-color;
             margin: 0 0 10px;
-            font-size: 28px;
+            font-size: 24px;
         }
 
         p {
             color: $text-color;
-            font-size: 18px;
-            line-height: 1.6;
+            font-size: 16px;
+            line-height: 1.5;
         }
     }
+}
+
+.click-text {
+    text-align: center;
+    margin-top: 20px;
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 @keyframes fadeIn {
@@ -113,10 +122,53 @@ body {
     }
 }
 
-.click-text {
-    text-align: center;
-    margin-top: 20px;
-    color: $text-color;
-    font-size: 16px;
-    font-weight: 500;
+//
+// 🔁 Responsive Media Queries
+//
+
+@media (max-width: 768px) {
+    .envelope-container {
+        width: 90vw;
+        height: 60vw;
+
+        .envelope::before {
+            border-width: 30vw 45vw 0 45vw;
+        }
+
+        .envelope::after {
+            border-width: 0 45vw 30vw 45vw;
+        }
+
+        .message-card {
+            padding: 15px;
+
+            h3 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .envelope-container {
+        height: 65vw;
+
+        .message-card {
+            h3 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .click-text {
+        font-size: 14px;
+    }
 }

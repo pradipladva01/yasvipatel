@@ -18,6 +18,7 @@ body {
   justify-content: center;
   text-align: center;
   gap: 20px;
+  padding: 20px;
 }
 
 .envelope-container {
@@ -63,11 +64,11 @@ body {
   position: absolute;
   top: 15px;
   left: 15px;
-  width: 670px;
-  height: 470px;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
   background-color: #fff8fb;
   border: 2px dashed #e91e63;
-  padding: 30px;
+  padding: 20px;
   box-sizing: border-box;
   border-radius: 12px;
   display: none;
@@ -77,12 +78,20 @@ body {
 .envelope-container .message-card h3 {
   color: #e91e63;
   margin: 0 0 10px;
-  font-size: 28px;
+  font-size: 24px;
 }
 .envelope-container .message-card p {
   color: #444;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.click-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #444;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 @keyframes fadeIn {
@@ -95,10 +104,38 @@ body {
     transform: translateY(0);
   }
 }
-.click-text {
-  text-align: center;
-  margin-top: 20px;
-  color: #444;
-  font-size: 16px;
-  font-weight: 500;
+@media (max-width: 768px) {
+  .envelope-container {
+    width: 90vw;
+    height: 60vw;
+  }
+  .envelope-container .envelope::before {
+    border-width: 30vw 45vw 0 45vw;
+  }
+  .envelope-container .envelope::after {
+    border-width: 0 45vw 30vw 45vw;
+  }
+  .envelope-container .message-card {
+    padding: 15px;
+  }
+  .envelope-container .message-card h3 {
+    font-size: 20px;
+  }
+  .envelope-container .message-card p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .envelope-container {
+    height: 65vw;
+  }
+  .envelope-container .message-card h3 {
+    font-size: 18px;
+  }
+  .envelope-container .message-card p {
+    font-size: 13px;
+  }
+  .click-text {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */
