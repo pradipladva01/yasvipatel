@@ -87,6 +87,9 @@ body {
         display: none;
         animation: fadeIn 0.8s ease forwards;
         box-shadow: $card-shadow;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         h3 {
             color: $primary-color;
@@ -159,6 +162,14 @@ body {
 @media (max-width: 480px) {
     .envelope-container {
         height: 65vh;
+
+        .envelope::before {
+                border-width: 70vw 45vw 0 45vw;
+            }
+        
+            .envelope::after {
+                border-width: 0 45vw 80vw 45vw;
+            }
 
         .message-card {
             h3 {

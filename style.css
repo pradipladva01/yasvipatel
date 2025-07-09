@@ -74,6 +74,9 @@ body {
   display: none;
   animation: fadeIn 0.8s ease forwards;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .envelope-container .message-card h3 {
   color: #e91e63;
@@ -131,6 +134,12 @@ body {
 @media (max-width: 480px) {
   .envelope-container {
     height: 65vh;
+  }
+  .envelope-container .envelope::before {
+    border-width: 70vw 45vw 0 45vw;
+  }
+  .envelope-container .envelope::after {
+    border-width: 0 45vw 80vw 45vw;
   }
   .envelope-container .message-card h3 {
     font-size: 18px;
