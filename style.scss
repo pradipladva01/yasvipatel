@@ -160,16 +160,9 @@ body {
 }
 
 @media (max-width: 480px) {
-    .envelope-container {
-        height: 65vh;
-
-        .envelope::before {
-                border-width: 70vw 45vw 0 45vw;
-            }
-        
-            .envelope::after {
-                border-width: 0 45vw 80vw 45vw;
-            }
+        .envelope-container {
+            height: 60vw;
+        // height: 65vh;
 
         .message-card {
             h3 {

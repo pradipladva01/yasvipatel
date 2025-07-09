@@ -57,15 +57,32 @@
       let current = 1;
       const total = 4;
       function showNextMessage() {
-        if (current > total) return; // stop further clicks after last message
-
+        if (current > total) return;
+    
+        // Hide all messages
         for (let i = 1; i <= total; i++) {
           document.getElementById(`message${i}`).style.display = "none";
         }
-
-        document.getElementById(`message${current}`).style.display = "flex";
+    
+        // Show current message
+        const currentMessage = document.getElementById(`message${current}`);
+        currentMessage.style.display = "flex";
+    
+        // Check for mobile screen and apply height conditionally
+        const container = document.querySelector('.envelope-container');
+        const isMobile = window.innerWidth <= 768;
+    
+        if (isMobile) {
+          if (current === 0) {
+            container.style.height = '60vw';
+          } else {
+            container.style.height = '65vh';
+          }
+        }
+    
         current++;
       }
     </script>
+    
   </body>
 </html>

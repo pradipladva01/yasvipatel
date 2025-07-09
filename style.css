@@ -133,13 +133,7 @@ body {
 }
 @media (max-width: 480px) {
   .envelope-container {
-    height: 65vh;
-  }
-  .envelope-container .envelope::before {
-    border-width: 70vw 45vw 0 45vw;
-  }
-  .envelope-container .envelope::after {
-    border-width: 0 45vw 80vw 45vw;
+    height: 60vw;
   }
   .envelope-container .message-card h3 {
     font-size: 18px;
