@@ -85,6 +85,9 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
+.envelope-container .message-card .p-style {
+  font-size: 22px;
+}
 
 .click-text {
   text-align: center;
@@ -127,7 +130,7 @@ body {
 }
 @media (max-width: 480px) {
   .envelope-container {
-    height: 65vw;
+    height: 65vh;
   }
   .envelope-container .message-card h3 {
     font-size: 18px;
