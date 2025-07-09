@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+  <title>e-Note for You</title>
+  <style>
+   
+  </style>
+</head>
+<body>
+  <section class="e_mail">
+    <div class="envelope-container" onclick="showNextMessage()">
+      <div class="envelope"></div>
+      <div id="message1" class="message-card">
+        <h3>Hi You 📨</h3>
+        <p>This is the first note from miles away... Just to say I’m thinking of you today 💌</p>
+      </div>
+      <div id="message2" class="message-card">
+        <h3>Remember?</h3>
+        <p>All our late-night laughs, random talks, and silly memories — they’re still fresh 💭</p>
+      </div>
+      <div id="message3" class="message-card">
+        <h3>Special Day 🥳</h3>
+        <p>On your special day, I just want you to know how much you mean to me 🫶</p>
+      </div>
+      <div id="message4" class="message-card">
+        <h3>Stay Close</h3>
+        <p>Even if we’re far, you’re always close to my heart. Always. ❤️</p>
+      </div>
+      <div id="message5" class="message-card">
+        <h3>The End?</h3>
+        <p>Not really... more messages coming soon 😄 Until then, smile wide for me!</p>
+      </div>
+    </div>
+    <div class="click-text">Click the envelope to read 💌</div>
+  </section>
+
+  <script>
+    let current = 1;
+    const total = 5;
+    function showNextMessage() {
+      if (current > total) return; // stop further clicks after last message
+  
+      for (let i = 1; i <= total; i++) {
+        document.getElementById(`message${i}`).style.display = 'none';
+      }
+  
+      document.getElementById(`message${current}`).style.display = 'block';
+      current++;
+    }
+  </script>
+  
+</body>
+</html>
